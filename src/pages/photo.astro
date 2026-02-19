@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<!--
+  Route rule:
+  - src/pages/photo.astro -> /photo
+
+  To show your own photo:
+  1) Put the image in /public (example: /public/me.jpg)
+  2) Change src="/me.jpg" below
+-->
+<Layout title="Photo">
+  <h1>Car Photos</h1>
+
+  <p>This is my car, a 2007 Honda Civic Si!</p>
+
+  <img src="/tva.JPG" alt="Placeholder image" width="720" />
+
+  <p>This photo was taken in Deal's Gap, TN. I traveled
+    there in May 2025 to experience the Tail of the Dragon.
+  </p>
+  <p>The car is my pride and joy. I don't know what I'd be
+    without it. The reason I'm doing all this is for the car.</p>
+</Layout>

@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<!--
+  Route rule:
+  - src/pages/resume.astro -> /resume
+
+  This page is plain text now.
+  Later, you can add a PDF in /public and link it.
+-->
+<Layout title="Resume">
+  <h1>Resume</h1>
+
+  <p>Name: Your Name</p>
+  <p>Email: your-email@example.com</p>
+
+  <h2>Education</h2>
+  <p>B.S. in Math/Statistics, Your University, Expected Year</p>
+
+  <h2>Skills</h2>
+  <p>Python, R, Bash, Git, VS Code, Data Analysis</p>
+
+  <h2>Experience</h2>
+  <p>Add internships, research, or projects here.</p>
+
+  <h2>Optional PDF Link (later)</h2>
+  <p>
+    Place a file like <code>resume.pdf</code> in the <code>public/</code> folder, then use:
+    <a href="/resume.pdf">Download Resume PDF</a>
+  </p>
+</Layout>

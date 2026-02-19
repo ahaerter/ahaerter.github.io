@@ -1,0 +1,29 @@
+---
+// Import the shared layout.
+// All pages will use the same nav and page structure from this file.
+import Layout from "../layouts/Layout.astro";
+---
+
+<!--
+  This is your Home page.
+  Route rule in Astro:
+  - src/pages/index.astro -> /
+-->
+<Layout title="Home">
+  <h1>Home</h1>
+
+  <p>Hi, I'm a junior at the University of Connecticut
+	studying Mathematics, Statistics, and Economics.</p>
+  <p>I made this website as a personal project so that I could learn
+	a little bit of webdev, and have somewhere to put my
+	stuff.</p>
+  <p>Please contact me at alejandro.haerter@uconn.edu</p>
+
+  <h2>On this site:</h2>
+  <ul>
+    <li><a href="/projects">Projects</a></li>
+    <li><a href="/resume">Resume</a></li>
+    <li><a href="/photo">Fiji Blue Pearl</a></li>
+    <li><a href="/blog">Blog</a></li>
+  </ul>
+</Layout>
