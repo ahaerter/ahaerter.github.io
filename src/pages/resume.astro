@@ -6,27 +6,32 @@ import Layout from "../layouts/Layout.astro";
   Route rule:
   - src/pages/resume.astro -> /resume
 
-  This page is plain text now.
-  Later, you can add a PDF in /public and link it.
+  This page shows your resume PDF directly in the browser.
+  Important:
+  - Put your real file at: public/resume.pdf
+  - Then go to: /resume
 -->
 <Layout title="Resume">
   <h1>Resume</h1>
 
-  <p>Name: Your Name</p>
-  <p>Email: your-email@example.com</p>
+  <!--
+    `iframe` embeds another page/file inside this page.
+    Here, we embed /resume.pdf so visitors can read the PDF inline.
+  -->
+  <iframe
+    src="/resume.pdf"
+    title="Alejandro Haerter Resume PDF"
+    width="100%"
+    height="900"
+  ></iframe>
 
-  <h2>Education</h2>
-  <p>B.S. in Math/Statistics, Your University, Expected Year</p>
-
-  <h2>Skills</h2>
-  <p>Python, R, Bash, Git, VS Code, Data Analysis</p>
-
-  <h2>Experience</h2>
-  <p>Add internships, research, or projects here.</p>
-
-  <h2>Optional PDF Link (later)</h2>
+  <!--
+    Fallback:
+    If someone's browser cannot show the PDF inline,
+    they can still open it directly.
+  -->
   <p>
-    Place a file like <code>resume.pdf</code> in the <code>public/</code> folder, then use:
-    <a href="/resume.pdf">Download Resume PDF</a>
+    If the PDF does not appear above, open it directly:
+    <a href="/resume.pdf">View resume PDF</a>
   </p>
 </Layout>
